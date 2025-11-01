@@ -224,7 +224,7 @@
     <style>
         .navigation {
             transition: background-color 0.4s ease, backdrop-filter 0.4s ease;
-            background-color: rgba(255, 255, 255, 0.95);
+            background-color: rgba(0, 0, 0, 0.95);
             backdrop-filter: blur(5px);
         }
 
@@ -245,8 +245,8 @@
                         <div
                             class="d-flex flex-row mt-2 mt-lg-0 flex-wrap justify-content-center align-items-center gap-3">
                             <a href="#" class="nav-link"><small>Home</small></a>
-                            <a href="#features" class="nav-link"><small>Collections</small></a>
-                            <a href="#about" class="nav-link"><small>About</small></a>
+                            <a href="features" class="nav-link"><small>About</small></a>
+                            <a href="projects" class="nav-link"><small>Projects</small></a>
 
                         </div>
                     </div>
@@ -256,31 +256,112 @@
     </div>
 
 
-    <div class="hero-container">
+    <div class="hero-container" id="#">
         <div class="text-section">
             <h1 class="headline"><span>Hello!</span><br>I'm Sea</h1>
             <p class="description">
                 Welcome to my digital space — a creative journey where technology meets art.
                 Discover projects that combine innovation, design, and passion.
             </p>
-
         </div>
-        <div class="image-section">
-            <div class="image-bg">
-                <img src="assets/chelseapfp.png" alt="Chelsea Laberinto" class="profile-img">
-            </div>
+
+        <div class="image-row" style="position: absolute; bottom: 10px; left: 80px; display: flex; gap: 10px;">
+            <a href="https://www.facebook.com/share/1Zy8DGqjto/" target="_blank">
+                <img src="assets/facebook.png" alt="facebook"
+                    style="width: 80px; height: 80px; object-fit: cover; cursor: pointer;">
+            </a>
+            <a href="https://github.com/chelsealaberinto" target="_blank">
+                <img src="assets/github.png" alt="github"
+                    style="width: 80px; height: 80px; object-fit: cover; cursor: pointer;">
+            </a>
+            <a href="https://www.linkedin.com/in/chelsea-laberinto-b40422372" target="_blank">
+                <img src="assets/linkedin.png" alt="linkedin"
+                    style="width: 80px; height: 80px; object-fit: cover; cursor: pointer;">
+            </a>
+        </div>
+    </div>
+    <div class="image-section" style="display: flex; justify-content: center; align-items: center; height: 50vh;">
+
+        <div style="
+        background: rgba(255, 105, 180, 0.25);
+        backdrop-filter: blur(25px) saturate(180%);
+        -webkit-backdrop-filter: blur(25px) saturate(180%);
+        border-radius: 40px;
+        box-shadow: 0 12px 40px rgba(255, 20, 147, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        padding: 20px; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;">
+
+            <img src="assets/chelseapfp.png" alt="Chelsea Laberinto"
+                style="width: 350px; height: 350px; object-fit: cover; border-radius: 50%;">
         </div>
     </div>
 
 
-    <div class="section">
+    <div class="section" style="margin-top: 150px;">
         <div class="section-title">About Me</div>
         <div class="about-text">
             Hello! I’m Chelsea Laberinto, a student at the Polytechnic University of the Philippines – Sto. Tomas
-            Campus, currently pursuing a degree in Information Technology. I have a deep passion for technology and a
+            Campus, currently pursuing a degree in Information Technology. I have a deep passion for technology and
+            a
             strong appreciation for art. I love watching romantic-comedy movies and spending quality time with my
             friends and family. I also enjoy cooking and experimenting with new recipes.
         </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; align-items: start; padding: 40px;">
+
+
+        <div class="section"
+            style="background: rgba(255, 105, 180, 0.1); padding: 25px; border-radius: 20px; box-shadow: 0 4px 20px rgba(255, 20, 147, 0.2);">
+
+            <div class="section-title" style="font-size: 24px; font-weight: bold; color: #ff007f; margin-bottom: 15px;">
+                Achievements
+            </div>
+
+            <ul style="color: #fff; line-height: 1.8; font-size: 16px;">
+                <li>2017–2021 — <strong>With High Honors</strong></li>
+                <li>2021–2023 — <strong>With Honors</strong></li>
+                <li>1st Semester, A.Y. 2023–2024 — <strong>Dean’s Lister</strong></li>
+                <li>2nd Semester, A.Y. 2023–2024 — <strong>President’s Lister</strong></li>
+                <li>1st Semester, A.Y. 2024–2025 — <strong>President’s Lister</strong></li>
+                <li>2nd Semester, A.Y. 2024–2025 — <strong>President’s Lister</strong></li>
+            </ul>
+
+            <h3 style="font-size: 24px; font-weight: bold; color: #ff007f; margin-bottom: 15px;">
+                Leadership and Organizational Involvement
+            </h3>
+            <ul style="color: #fff; line-height: 1.8; font-size: 16px;">
+                <li><strong>Computer Society Deputy Secretary</strong> — A.Y. 2024–2025</li>
+                <li><strong>BSIT 2-1 Treasurer</strong> — A.Y. 2024–2025</li>
+            </ul>
+        </div>
+
+
+        <div class="section"
+            style="background: rgba(255, 105, 180, 0.1); padding: 25px; border-radius: 20px; box-shadow: 0 4px 20px rgba(255, 20, 147, 0.2);">
+
+            <div class="section-title" style="font-size: 24px; font-weight: bold; color: #ff007f; margin-bottom: 15px;">
+                Credentials
+            </div>
+
+            <div class="about-text" style="color: #fff; line-height: 1.8; font-size: 16px;">
+                <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                    <li><strong>I2CS Update 2025</strong> — <em>June 29, 2025</em> — Issued by <strong>I2CS
+                            Organization</strong></li>
+                    <li><strong>Data Science Essentials with Python (v1.2)</strong> — <em>September 30, 2025</em> —
+                        Issued by <strong>DataCamp / Python Training Program</strong></li>
+                    <li><strong>GenLit (General Literacy) – Pinas Forward</strong> — <em>August 30, 2024</em> —
+                        Issued by <strong>Pinas Forward Academy</strong></li>
+                    <li><strong>A-SYS Official Program Certificate</strong> — <em>Date Not Specified</em> — Issued
+                        by <strong>A-SYS Organization</strong></li>
+                </ul>
+            </div>
+        </div>
+
     </div>
 
 
@@ -337,28 +418,26 @@
         <div class="row">
             <div class="col">
                 <div class="mb-3">
-                    <img src="assets/sea logo.png" alt="Beaches Go Everywhere" style="height: 50px; width: 50px;">
+                    <img src="assets/PUPLogo.png" alt="PUP" style="height: 50px; width: 50px;">
                 </div>
                 <div class="my-4">
-                    <small>Let's make every day a beach day!</small>
+                    <small>Polytechnic University of the Philippines Sto. Tomas Branch</small>
                 </div>
-                <div class="mt-5 text-body-secondary">© 2025 Chelsea's Beach Showcase</div>
             </div>
         </div>
-    </div>
 
-    <!-- Scripts -->
-    <script>
-        window.addEventListener('scroll', function () {
-            const nav = document.querySelector('.navigation');
-            if (window.scrollY > 50) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
-        });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Scripts -->
+        <script>
+            window.addEventListener('scroll', function () {
+                const nav = document.querySelector('.navigation');
+                if (window.scrollY > 50) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            });
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
