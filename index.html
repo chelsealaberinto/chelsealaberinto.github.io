@@ -6,248 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>chelsealaberinto - Portfolio</title>
     <link rel="icon" type="sea logo/png" href="assets/sea logo.png">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-        body {
-            min-height: 100vh;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: radial-gradient(circle at 60% 40%, #000000 40%, #ff007f 100%);
-            color: #fff;
-        }
-
-        .fluid-container {
-            max-width: 900px;
-            margin: 40px auto;
-            background: linear-gradient(120deg, rgba(0, 0, 0, 0.95), rgba(255, 20, 147, 0.9) 80%);
-            border-radius: 32px;
-            box-shadow: 0 0 32px 0 rgba(255, 20, 147, 0.3);
-            padding: 48px 40px 32px 40px;
-            position: relative;
-        }
-
-        .welcome {
-            letter-spacing: 1px;
-            color: #fff8;
-            font-size: 1.05em;
-            margin-bottom: 12px;
-        }
-
-        .headline {
-            font-size: 2.7em;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-
-        .sub-headline {
-            font-size: 1.5em;
-            color: #ff69b4;
-            font-weight: 600;
-        }
-
-        .info {
-            margin: 18px 0 30px 0;
-            color: #f0f0f0;
-            font-size: 1.07em;
-            line-height: 1.6;
-        }
-
-        .section {
-            background: rgba(0, 0, 0, 0.85);
-            border-radius: 24px;
-            padding: 32px;
-            margin: 10px auto;
-            max-width: 900px;
-            box-shadow: 0 0 16px 0 rgba(255, 20, 147, 0.3);
-        }
-
-        .section-title {
-            font-size: 1.6em;
-            font-weight: bold;
-            margin-bottom: 16px;
-            color: #ff69b4;
-        }
-
-        .about-text {
-            color: #f0f0f0;
-            font-size: 1.07em;
-            line-height: 1.6;
-        }
-
-        .top-right-img {
-            position: absolute;
-            top: 50%;
-            right: 5%;
-            transform: translateY(-50%);
-            width: clamp(80px, 15vw, 150px);
-            height: auto;
-            border-radius: 50%;
-            border: 4px solid #ff69b4;
-            object-fit: cover;
-        }
-
-
-        .card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 20, 147, 0.4);
-            backdrop-filter: blur(10px);
-            color: #fff;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 0 20px rgba(255, 20, 147, 0.4);
-        }
-
-        .card-title {
-            color: #ff69b4;
-        }
-
-        .btn-primary {
-            background-color: #ff69b4;
-            border: none;
-            transition: background-color 0.3s;
-        }
-
-        .btn-primary:hover {
-            background-color: #ff007f;
-        }
-
-        @media (max-width: 700px) {
-
-            .fluid-container,
-            .section {
-                padding: 20px;
-            }
-
-            .headline {
-                font-size: 2em;
-            }
-
-            .sub-headline {
-                font-size: 1.1em;
-            }
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background-color: #fff;
-            color: #fff9e4;
-        }
-
-        .hero-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 80px 100px;
-            min-height: 100vh;
-            flex-wrap: wrap;
-        }
-
-
-        .text-section {
-            flex: 1;
-            max-width: 550px;
-        }
-
-        .headline {
-            font-size: 5rem;
-            font-weight: 800;
-            line-height: 1;
-            margin-bottom: 20px;
-        }
-
-        .headline span {
-            color: #ff007f;
-        }
-
-        .description {
-            font-size: 1.1rem;
-            color: #ffffff;
-            margin-bottom: 40px;
-            line-height: 1.6;
-        }
-
-        .image-section {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .image-bg {
-            background-color: #ff007f;
-            border-radius: 30px;
-            padding: 40px;
-            width: 400px;
-            height: 400px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 0 30px rgba(255, 0, 127, 0.3);
-        }
-
-        .profile-img {
-            width: 100%;
-            height: auto;
-            border-radius: 20px;
-            object-fit: cover;
-        }
-
-        @media (max-width: 992px) {
-            .hero-container {
-                flex-direction: column;
-                text-align: center;
-                padding: 60px 30px;
-            }
-
-            .image-bg {
-                margin-top: 50px;
-                width: 300px;
-                height: 300px;
-            }
-
-            .headline {
-                font-size: 3rem;
-            }
-        }
-    </style>
 </head>
 
-<body>
-    <!-- Navigation Bar -->
-    <style>
-        .navigation {
-            transition: background-color 0.4s ease, backdrop-filter 0.4s ease;
-            background-color: rgba(0, 0, 0, 0.95);
-            backdrop-filter: blur(5px);
-        }
-
-        .navigation.scrolled {
-            background-color: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(5px);
-        }
-    </style>
+<body
+    style="min-height:100vh;margin:0;padding:0;font-family:'Segoe UI',Arial,sans-serif;background:radial-gradient(circle at 60% 40%,#000000 40%,#ff007f 100%);color:#fff;">
 
     <div class="container-fluid position-sticky top-0 p-0 p-lg-3 z-1">
         <div class="container-xl p-0">
-            <div class="navigation glass shadow-sm p-4 px-xl-5 poppins rounded-5 border-bottom">
+            <div class="navigation glass shadow-sm p-4 px-xl-5 poppins rounded-5 border-bottom"
+                style="transition:background-color 0.4s ease,backdrop-filter 0.4s ease;background-color:rgba(0,0,0,0.95);backdrop-filter:blur(5px);">
                 <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center">
                     <div class="d-flex flex-row align-items-center">
-                        <a href="../../../">
-                            <img class="me-4" src="assets/sea logo.png" style="width: 50px; height: 50px;">
+                        <a href="index.html">
+                            <img class="me-4" src="assets/sea logo.png" style="width:50px;height:50px;">
                         </a>
                         <div
                             class="d-flex flex-row mt-2 mt-lg-0 flex-wrap justify-content-center align-items-center gap-3">
                             <a href="#" class="nav-link"><small>Home</small></a>
-                            <a href="features" class="nav-link"><small>About</small></a>
-                            <a href="projects" class="nav-link"><small>Projects</small></a>
-
+                            <a href="#about" class="nav-link"><small>About</small></a>
+                            <a href="#projects" class="nav-link"><small>Projects</small></a>
                         </div>
                     </div>
                 </div>
@@ -255,189 +33,203 @@
         </div>
     </div>
 
+    <!-- HERO SECTION -->
+    <div class="container-fluid py-5" id="features" style="min-height:100vh;display:flex;align-items:center;">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
 
-    <div class="hero-container" id="#">
-        <div class="text-section">
-            <h1 class="headline"><span>Hello!</span><br>I'm Sea</h1>
-            <p class="description">
-                Welcome to my digital space — a creative journey where technology meets art.
-                Discover projects that combine innovation, design, and passion.
-            </p>
-        </div>
+                <!-- LEFT SIDE: TEXT -->
+                <div class="col-lg-6 col-md-12 mb-5 mb-lg-0 text-center text-lg-start">
+                    <h1 class="fw-bold" style="font-size:4.5rem;line-height:1.1;color:#fff;">
+                        <span style="color:#ff007f;">Hello!</span><br>I'm Sea
+                    </h1>
+                    <p class="mt-4" style="font-size:1.15rem;color:#f5f5f5;line-height:1.7;">
+                        Welcome to my digital space — a creative journey where technology meets art.
+                        Discover projects that combine innovation, design, and passion.
+                    </p>
+                    <div class="container text-center py-4">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-12 d-flex justify-content-center align-items-center flex-wrap gap-4">
 
-        <div class="image-row" style="position: absolute; bottom: 10px; left: 80px; display: flex; gap: 10px;">
-            <a href="https://www.facebook.com/share/1Zy8DGqjto/" target="_blank">
-                <img src="assets/facebook.png" alt="facebook"
-                    style="width: 80px; height: 80px; object-fit: cover; cursor: pointer;">
-            </a>
-            <a href="https://github.com/chelsealaberinto" target="_blank">
-                <img src="assets/github.png" alt="github"
-                    style="width: 80px; height: 80px; object-fit: cover; cursor: pointer;">
-            </a>
-            <a href="https://www.linkedin.com/in/chelsea-laberinto-b40422372" target="_blank">
-                <img src="assets/linkedin.png" alt="linkedin"
-                    style="width: 80px; height: 80px; object-fit: cover; cursor: pointer;">
-            </a>
+                                <a href="https://www.facebook.com/share/1Zy8DGqjto/" target="_blank"
+                                    class="d-inline-block">
+                                    <img src="assets/facebook.png" alt="facebook" class="img-fluid"
+                                        style="max-width:80px;">
+                                </a>
+
+                                <a href="https://github.com/chelsealaberinto" target="_blank" class="d-inline-block">
+                                    <img src="assets/github.png" alt="github" class="img-fluid" style="max-width:80px;">
+                                </a>
+
+                                <a href="https://www.linkedin.com/in/chelsea-laberinto-b40422372" target="_blank"
+                                    class="d-inline-block">
+                                    <img src="assets/linkedin.png" alt="linkedin" class="img-fluid"
+                                        style="max-width:80px;">
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- RIGHT SIDE: IMAGE -->
+                <div class="col-lg-6 col-md-12 d-flex justify-content-center">
+                    <div style="background:rgba(255,105,180,0.25);
+                 backdrop-filter:blur(25px)saturate(180%);
+                 -webkit-backdrop-filter:blur(25px)saturate(180%);
+                 border-radius:40px;
+                 box-shadow:0 12px 40px rgba(255,20,147,0.4);
+                 border:1px solid rgba(255,255,255,0.25);
+                 padding:8px;
+                 display:flex;
+                 justify-content:center;
+                 align-items:center;
+                 transition:transform 0.3s ease,box-shadow 0.3s ease;">
+                        <img src="assets/chelseapfp.png" alt="Chelsea Laberinto"
+                            style="width:350px;height:350px;object-fit:cover;border-radius:50%;">
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
-    <div class="image-section" style="display: flex; justify-content: center; align-items: center; height: 50vh;">
 
-        <div style="
-        background: rgba(255, 105, 180, 0.25);
-        backdrop-filter: blur(25px) saturate(180%);
-        -webkit-backdrop-filter: blur(25px) saturate(180%);
-        border-radius: 40px;
-        box-shadow: 0 12px 40px rgba(255, 20, 147, 0.4);
-        border: 1px solid rgba(255, 255, 255, 0.25);
-        padding: 20px; 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;">
 
-            <img src="assets/chelseapfp.png" alt="Chelsea Laberinto"
-                style="width: 350px; height: 350px; object-fit: cover; border-radius: 50%;">
+    <div class="container" id="about"
+        style="scroll-margin-top:150px;background:rgba(0,0,0,0.85);border-radius:24px;padding:32px;margin:10px auto;box-shadow:0 0 16px 0 rgba(255,20,147,0.3);">
+        <div class="header" style="font-size:1.6em;font-weight:bold;margin-bottom:16px;color:#ff69b4;">
+            About Me
         </div>
-    </div>
-
-
-    <div class="section" style="margin-top: 150px;">
-        <div class="section-title">About Me</div>
-        <div class="about-text">
-            Hello! I’m Chelsea Laberinto, a student at the Polytechnic University of the Philippines – Sto. Tomas
-            Campus, currently pursuing a degree in Information Technology. I have a deep passion for technology and
-            a
-            strong appreciation for art. I love watching romantic-comedy movies and spending quality time with my
+        <div class="p" style="color:#f0f0f0;font-size:1.07em;line-height:1.6; justify-content:space-between;">
+            Hello! I'm Chelsea Laberinto, a student at the Polytechnic University of the Philippines - Sto.
+            Tomas
+            Campus, currently pursuing a degree in Information Technology. I have a deep passion for technology
+            and
+            a strong appreciation for art. I love watching romantic-comedy movies and spending quality time with
+            my
             friends and family. I also enjoy cooking and experimenting with new recipes.
         </div>
     </div>
+    </div>
+    </div>
 
-    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; align-items: start; padding: 40px;">
+    <div class="container py-5">
+        <div class="row g-4">
 
+            <!-- Achievements Section -->
+            <div class="col-lg-6">
+                <div class="section bg-opacity-10 p-4 rounded-4 shadow"
+                    style="background:rgba(255,105,180,0.1);box-shadow:0 4px 20px rgba(255,20,147,0.2);color:#fff;">
+                    <h3 class="fw-bold mb-3" style="color:#ff007f;">Achievements</h3>
+                    <ul class="list-unstyled mb-4" style="line-height:1.8;font-size:16px;">
+                        <li>2017–2021 — <strong>With High Honors</strong></li>
+                        <li>2021–2023 — <strong>With Honors</strong></li>
+                        <li>1st Semester, A.Y. 2023–2024 — <strong>Dean’s Lister</strong></li>
+                        <li>2nd Semester, A.Y. 2023–2024 — <strong>President’s Lister</strong></li>
+                        <li>1st Semester, A.Y. 2024–2025 — <strong>President’s Lister</strong></li>
+                        <li>2nd Semester, A.Y. 2024–2025 — <strong>President’s Lister</strong></li>
+                    </ul>
 
-        <div class="section"
-            style="background: rgba(255, 105, 180, 0.1); padding: 25px; border-radius: 20px; box-shadow: 0 4px 20px rgba(255, 20, 147, 0.2);">
-
-            <div class="section-title" style="font-size: 24px; font-weight: bold; color: #ff007f; margin-bottom: 15px;">
-                Achievements
+                    <h3 class="fw-bold mb-3" style="color:#ff007f;">Leadership and Organizational Involvement</h3>
+                    <ul class="list-unstyled" style="line-height:1.8;font-size:16px;">
+                        <li><strong>Computer Society Deputy Secretary</strong> — A.Y. 2024–2025</li>
+                        <li><strong>BSIT 2-1 Treasurer</strong> — A.Y. 2024–2025</li>
+                    </ul>
+                </div>
             </div>
 
-            <ul style="color: #fff; line-height: 1.8; font-size: 16px;">
-                <li>2017–2021 — <strong>With High Honors</strong></li>
-                <li>2021–2023 — <strong>With Honors</strong></li>
-                <li>1st Semester, A.Y. 2023–2024 — <strong>Dean’s Lister</strong></li>
-                <li>2nd Semester, A.Y. 2023–2024 — <strong>President’s Lister</strong></li>
-                <li>1st Semester, A.Y. 2024–2025 — <strong>President’s Lister</strong></li>
-                <li>2nd Semester, A.Y. 2024–2025 — <strong>President’s Lister</strong></li>
-            </ul>
+            <!-- Credentials Section -->
+            <div class="col-lg-6">
+                <div class="section bg-opacity-10 p-4 rounded-4 shadow"
+                    style="background:rgba(255,105,180,0.1);box-shadow:0 4px 20px rgba(255,20,147,0.2);color:#fff;">
+                    <h3 class="fw-bold mb-3" style="color:#ff007f;">Credentials</h3>
+                    <ul class="list-unstyled" style="line-height:1.8;font-size:16px;">
+                        <li><strong>I2CS Update 2025</strong> — <em>June 29, 2025</em> — Issued by <strong>I2CS
+                                Organization</strong></li><br>
+                        <li><strong>Data Science Essentials with Python (v1.2)</strong> — <em>September 30, 2025</em> —
+                            Issued by <strong>DataCamp / Python Training Program</strong></li><br>
+                        <li><strong>GenLit (General Literacy) – Pinas Forward</strong> — <em>August 30, 2024</em> —
+                            Issued by <strong>Pinas Forward Academy</strong></li><br>
+                        <li><strong>A-SYS Official Program Certificate</strong> — <em>Date Not Specified</em> — Issued
+                            by <strong>A-SYS Organization</strong></li>
+                    </ul>
+                </div>
+            </div>
 
-            <h3 style="font-size: 24px; font-weight: bold; color: #ff007f; margin-bottom: 15px;">
-                Leadership and Organizational Involvement
-            </h3>
-            <ul style="color: #fff; line-height: 1.8; font-size: 16px;">
-                <li><strong>Computer Society Deputy Secretary</strong> — A.Y. 2024–2025</li>
-                <li><strong>BSIT 2-1 Treasurer</strong> — A.Y. 2024–2025</li>
-            </ul>
         </div>
-
-
-        <div class="section"
-            style="background: rgba(255, 105, 180, 0.1); padding: 25px; border-radius: 20px; box-shadow: 0 4px 20px rgba(255, 20, 147, 0.2);">
-
-            <div class="section-title" style="font-size: 24px; font-weight: bold; color: #ff007f; margin-bottom: 15px;">
-                Credentials
-            </div>
-
-            <div class="about-text" style="color: #fff; line-height: 1.8; font-size: 16px;">
-                <ul style="list-style-type: none; padding-left: 0; margin: 0;">
-                    <li><strong>I2CS Update 2025</strong> — <em>June 29, 2025</em> — Issued by <strong>I2CS
-                            Organization</strong></li>
-                    <li><strong>Data Science Essentials with Python (v1.2)</strong> — <em>September 30, 2025</em> —
-                        Issued by <strong>DataCamp / Python Training Program</strong></li>
-                    <li><strong>GenLit (General Literacy) – Pinas Forward</strong> — <em>August 30, 2024</em> —
-                        Issued by <strong>Pinas Forward Academy</strong></li>
-                    <li><strong>A-SYS Official Program Certificate</strong> — <em>Date Not Specified</em> — Issued
-                        by <strong>A-SYS Organization</strong></li>
-                </ul>
-            </div>
-        </div>
-
     </div>
 
 
-    <div class="container my-5">
+    <div class="container my-5" id="projects" style="scroll-margin-top:150px;">
         <div class="section-title text-center mb-4">
-            <h2 class="fw-bold">Projects</h2>
+            <h2 class="fw-bold" style="color:#ff69b4;">Projects</h2>
         </div>
-
         <div class="row justify-content-center g-4">
-            <!-- Card 1 -->
             <div class="col-md-6 col-lg-6 my-5">
-                <div class="card shadow border-0 rounded-4" style="width: 100%; overflow: hidden;">
+                <div class="card shadow border-0 rounded-4"
+                    style="width:100%;overflow:hidden;background:rgba(255,255,255,0.05);border:1px solid rgba(255,20,147,0.4);backdrop-filter:blur(10px);color:#fff;">
                     <div class="ratio ratio-16x9">
                         <iframe src="https://chelsealaberinto.github.io/chelsea-showcase.github.io/"
                             title="Chelsea Showcase" loading="lazy" allowfullscreen style="border:0;"></iframe>
                     </div>
                     <div class="card-body text-center">
-                        <h5 class="card-title fw-semibold">Chelsea’s Hardware Showcase</h5>
-                        <p class="card-text text-secondary">
+                        <h5 class="card-title fw-semibold" style="color:#ff69b4;">Chelsea’s Hardware Showcase</h5>
+                        <p class="card-text text-secondary" style="color:#ccc;">
                             A creative showcase of Chelsea’s favorite Hardware Gadget.
                         </p>
-                        <a href="https://chelsealaberinto.github.io/chelsea-showcase.github.io/" target="_blank"
-                            class="btn btn-primary fw-semibold px-4 py-2 rounded-pill">
-                            Visit Site
-                        </a>
+                        <a href="https://chelsealaberinto.github.io/chelsea-showcase.github.io/" target=""
+                            class="btn btn-primary fw-semibold px-4 py-2 rounded-pill"
+                            style="background-color:#ff69b4;border:none;">Visit Site</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Card 2 -->
             <div class="col-md-6 col-lg-6 my-5">
-                <div class="card shadow border-0 rounded-4" style="width: 100%; overflow: hidden;">
+                <div class="card shadow border-0 rounded-4"
+                    style="width:100%;overflow:hidden;background:rgba(255,255,255,0.05);border:1px solid rgba(255,20,147,0.4);backdrop-filter:blur(10px);color:#fff;">
                     <div class="ratio ratio-16x9">
                         <iframe src="https://chelsealaberinto.github.io/chelsea-beaches-showcase.github.io/"
                             title="Chelsea Beaches Showcase" loading="lazy" allowfullscreen style="border:0;"></iframe>
                     </div>
                     <div class="card-body text-center">
-                        <h5 class="card-title fw-semibold">Chelsea’s Beaches Showcase</h5>
-                        <p class="card-text text-secondary">
+                        <h5 class="card-title fw-semibold" style="color:#ff69b4;">Chelsea’s Beaches Showcase</h5>
+                        <p class="card-text text-secondary" style="color:#ccc;">
                             Explore beautiful beaches and scenic coasts through this showcase.
                         </p>
-                        <a href="https://chelsealaberinto.github.io/chelsea-beaches-showcase.github.io/" target="_blank"
-                            class="btn btn-primary fw-semibold px-4 py-2 rounded-pill">
-                            Visit Site
-                        </a>
+                        <a href="https://chelsealaberinto.github.io/chelsea-beaches-showcase.github.io/" target=""
+                            class="btn btn-primary fw-semibold px-4 py-2 rounded-pill"
+                            style="background-color:#ff69b4;border:none;">Visit Site</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
     <div class="container-fluid glass mt-4 p-5 shadow-sm text-center border-top rounded-top-5">
         <div class="row">
             <div class="col">
                 <div class="mb-3">
-                    <img src="assets/PUPLogo.png" alt="PUP" style="height: 50px; width: 50px;">
+                    <img src="assets/sea logo.png" alt="PUP" style="height:50px;width:50px;">
                 </div>
                 <div class="my-4">
-                    <small>Polytechnic University of the Philippines Sto. Tomas Branch</small>
+                    <small>Grow through what you go through</small>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Scripts -->
-        <script>
-            window.addEventListener('scroll', function () {
-                const nav = document.querySelector('.navigation');
-                if (window.scrollY > 50) {
-                    nav.classList.add('scrolled');
-                } else {
-                    nav.classList.remove('scrolled');
-                }
-            });
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        window.addEventListener('scroll', function () {
+            const nav = document.querySelector('.navigation');
+            if (window.scrollY > 50) {
+                nav.style.backgroundColor = 'rgba(255,255,255,0.6)';
+            } else {
+                nav.style.backgroundColor = 'rgba(0,0,0,0.95)';
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
