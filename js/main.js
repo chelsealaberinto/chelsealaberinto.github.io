@@ -2,8 +2,7 @@
  * ==========================================================================
  * SEA STUDIO — PORTFOLIO MAIN JAVASCRIPT
  * Author: Chelsea Laberinto (Sea)
- * Description: Interactive behaviors, featured carousel, extensible project
- *              showcase, modal previews, scroll reveal, and accessible parallax.
+ * Theme: Biana Creative Studio Palette & Aesthetic
  * ==========================================================================
  */
 
@@ -22,6 +21,7 @@ const projectsData = [
     title: "The Golden Gala Animated Video Invitation",
     category: "invitations",
     categoryLabel: "Video Invitations",
+    tagClass: "tag-purple",
     image: "assets/mockup_video_invite.jpg",
     description: "Dynamic motion invitation reel featuring elegant typography, sparkling particle effects, and music-synced transitions.",
     longDescription: "A custom animated motion invitation tailored for a grand gala celebration. Designed for mobile-first distribution across Instagram Reels, WhatsApp, and iMessage with fluid animations, glowing gold sparkles, and synchronized ambient background music.",
@@ -37,6 +37,7 @@ const projectsData = [
     title: "Charlotte's Birthday & Event Stationery Suite",
     category: "invitations",
     categoryLabel: "Invitations & Stationery",
+    tagClass: "tag-purple",
     image: "assets/mockup_invitations.jpg",
     description: "Bespoke print & digital invitation suite featuring delicate botanical illustrations, gold foil typography, and RSVP cards.",
     longDescription: "An artisanal stationery suite crafted for an intimate milestone birthday celebration. Includes custom typography, hand-curated botanical floral accents, print-ready gold foil stamping vectors, matching RSVP cards, and personalized envelope seals.",
@@ -52,6 +53,7 @@ const projectsData = [
     title: "Bloom & Bough Cafe & Bistro Brand Identity",
     category: "branding",
     categoryLabel: "Menu & Brand Identity",
+    tagClass: "tag-orange",
     image: "assets/mockup_menu_branding.jpg",
     description: "Complete visual identity, arched table menus, specialty coffee cups, and minimal price lists for a modern botanical bistro.",
     longDescription: "Comprehensive brand identity system for 'Bloom & Bough' cafe. The deliverable encompassed the primary logo, earthy color palette, custom illustrated botanical monogram, arched food menu cards, coffee packaging, and stationery assets.",
@@ -67,6 +69,7 @@ const projectsData = [
     title: "Brandify Studio Social Media Content Kit",
     category: "branding",
     categoryLabel: "Social Media Design",
+    tagClass: "tag-orange",
     image: "assets/mockup_social_media.jpg",
     description: "Curated cohesive Instagram carousel layouts, daily inspiration templates, and story mockups with playful organic shapes.",
     longDescription: "A turnkey 30+ template social media design kit created for boutique lifestyle and creative brands. Features customizable Canva & Figma layouts, organic wavy shapes, vibrant pastel tones, engaging call-to-action badges, and cohesive typography guidelines.",
@@ -82,6 +85,7 @@ const projectsData = [
     title: "Lumina Studio Executive Pitch Deck",
     category: "decks",
     categoryLabel: "Presentation Design",
+    tagClass: "tag-yellow",
     image: "assets/mockup_presentation.jpg",
     description: "Sleek executive keynote deck featuring custom data visualizations, growth infographics, and modern frosted glass aesthetics.",
     longDescription: "A high-stakes corporate pitch deck designed to articulate value proposition and metrics with clarity and elegance. Built with modern typography hierarchy, minimalist infographic charts, and glassmorphic slide layouts to captivate investors and clients.",
@@ -96,7 +100,8 @@ const projectsData = [
     id: "web-disney-api",
     title: "Chelsea's Disney Movies API Showcase",
     category: "web",
-    categoryLabel: "Web & Apps",
+    categoryLabel: "Websites & Apps",
+    tagClass: "tag-pink",
     image: "assets/mockup_social_media.jpg",
     description: "Interactive web application consuming Disney API with dynamic character cards, movie filtering, and fluid animations.",
     longDescription: "A playful web application built to explore the magical universe of Disney films and characters. Features asynchronous API data fetching, real-time search, responsive character grid, and interactive modals.",
@@ -111,7 +116,8 @@ const projectsData = [
     id: "web-hardware-showcase",
     title: "Chelsea's Hardware & Tech Showcase",
     category: "web",
-    categoryLabel: "Web & Apps",
+    categoryLabel: "Websites & Apps",
+    tagClass: "tag-pink",
     image: "assets/mockup_presentation.jpg",
     description: "Curated interactive product showcase highlighting modern computing hardware, specifications, and design aesthetics.",
     longDescription: "A sleek modern showcase highlighting top-tier tech gadgets, mechanical keyboards, and creative workstation hardware. Built with responsive cards and clean interactive preview layouts.",
@@ -126,7 +132,8 @@ const projectsData = [
     id: "web-beaches-showcase",
     title: "Chelsea's Beaches & Coastal Showcase",
     category: "web",
-    categoryLabel: "Web & Apps",
+    categoryLabel: "Websites & Apps",
+    tagClass: "tag-pink",
     image: "assets/mockup_invitations.jpg",
     description: "Visual travel showcase celebrating scenic coastal destinations, tropical beaches, and photography galleries.",
     longDescription: "An immersive visual journey through picturesque coastal spots and tropical escapes. Features smooth photo galleries, lightbox transitions, and responsive travel cards.",
@@ -141,7 +148,8 @@ const projectsData = [
     id: "web-princesses-gallery",
     title: "Chelsea's Princesses Gallery",
     category: "web",
-    categoryLabel: "Web & Apps",
+    categoryLabel: "Websites & Apps",
+    tagClass: "tag-pink",
     image: "assets/mockup_video_invite.jpg",
     description: "Enchanting digital gallery celebrating iconic storybook princesses with curated color palettes and character bios.",
     longDescription: "A digital storybook gallery exploring beloved princess characters. Built with soft pastel cards, whimsical hover animations, and responsive interactive grids.",
@@ -162,7 +170,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initFeaturedCarousel();
   initProjectsGrid();
   initProjectModal();
-  initContactForm();
   initScrollSpy();
   initScrollAnimations();
   initParallaxEffects();
@@ -179,7 +186,6 @@ function initNavbar() {
 
   if (!navbar) return;
 
-  // Header scroll state toggle
   const handleScrollState = () => {
     if (window.scrollY > 40) {
       navbar.classList.add("scrolled");
@@ -191,7 +197,6 @@ function initNavbar() {
   window.addEventListener("scroll", handleScrollState, { passive: true });
   handleScrollState();
 
-  // Mobile Drawer Toggle
   if (mobileToggle && mobileMenu) {
     const toggleMenu = (open) => {
       const isCurrentlyOpen = mobileMenu.classList.contains("open");
@@ -217,7 +222,7 @@ function initNavbar() {
 }
 
 // --------------------------------------------------------------------------
-// 04. FEATURED CAROUSEL MODULE
+// 04. FEATURED CAROUSEL MODULE (Light Style)
 // --------------------------------------------------------------------------
 function initFeaturedCarousel() {
   const track = document.getElementById("carouselTrack");
@@ -355,7 +360,6 @@ function initFeaturedCarousel() {
     carouselContainer.addEventListener("mouseleave", startAutoPlay);
   }
 
-  // Touch gesture support
   let touchStartX = 0;
   let touchEndX = 0;
 
@@ -410,7 +414,7 @@ function initProjectsGrid() {
     if (filteredList.length === 0) {
       grid.innerHTML = `
         <div style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem;">
-          <p style="font-size: 1.1rem; color: var(--text-secondary);">No projects found in this category.</p>
+          <p style="font-size: 1.15rem; color: var(--text-body); font-weight:700;">No projects found in this category.</p>
         </div>
       `;
       return;
@@ -431,7 +435,7 @@ function initProjectsGrid() {
       card.innerHTML = `
         <div class="project-thumbnail-wrapper">
           <img src="${project.image}" alt="${project.title} - Sea Studio" class="project-thumbnail" loading="lazy">
-          <span class="project-category-tag">${project.categoryLabel}</span>
+          <span class="project-category-tag ${project.tagClass || 'tag-pink'}">${project.categoryLabel}</span>
         </div>
         <div class="project-body">
           <h3 class="project-title">${project.title}</h3>
@@ -582,67 +586,7 @@ function closeProjectModal() {
   }
 }
 
-// --------------------------------------------------------------------------
-// 07. CONTACT FORM & CLIENT-SIDE VALIDATION
-// --------------------------------------------------------------------------
-function initContactForm() {
-  const form = document.getElementById("contactForm");
-  const feedback = document.getElementById("formFeedback");
 
-  if (!form) return;
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const nameInput = document.getElementById("clientName");
-    const emailInput = document.getElementById("clientEmail");
-    const serviceInput = document.getElementById("clientService");
-    const messageInput = document.getElementById("clientMessage");
-    const submitBtn = form.querySelector(".btn-submit-form");
-
-    const name = nameInput ? nameInput.value.trim() : "";
-    const email = emailInput ? emailInput.value.trim() : "";
-    const service = serviceInput ? serviceInput.value : "";
-    const message = messageInput ? messageInput.value.trim() : "";
-
-    if (!name || !email || !message) {
-      alert("Please fill in your name, email, and message to proceed.");
-      return;
-    }
-
-    const originalText = submitBtn.innerHTML;
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = `
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="animation: spin 0.8s linear infinite;">
-        <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
-        <path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"></path>
-      </svg>
-      <span>Sending Message...</span>
-    `;
-
-    const subject = encodeURIComponent(
-      `Creative Project Inquiry [${service}] from ${name}`
-    );
-    const body = encodeURIComponent(
-      `Hi Sea,\n\nMy name is ${name} (${email}).\nI am interested in your ${service} service.\n\nProject details:\n${message}\n\nBest regards,\n${name}`
-    );
-    const mailtoUrl = `mailto:laberintochelsea@gmail.com?subject=${subject}&body=${body}`;
-
-    setTimeout(() => {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalText;
-
-      if (feedback) {
-        feedback.className = "form-feedback success";
-        feedback.innerHTML = `✨ Thank you, <strong>${name}</strong>! Your inquiry has been prepared. Opening your mail client now...`;
-        feedback.style.display = "block";
-      }
-
-      window.location.href = mailtoUrl;
-      form.reset();
-    }, 850);
-  });
-}
 
 // --------------------------------------------------------------------------
 // 08. SCROLLSPY (Active Navigation Links)
@@ -709,7 +653,6 @@ function initScrollAnimations() {
 // 10. SUBTLE PARALLAX EFFECT (Accessibility Aware)
 // --------------------------------------------------------------------------
 function initParallaxEffects() {
-  // Check if user prefers reduced motion
   const prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
