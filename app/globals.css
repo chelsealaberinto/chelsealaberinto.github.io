@@ -44,8 +44,8 @@
   --border-purple: rgba(155, 143, 214, 0.25);
 
   /* Typography */
-  --font-heading: 'Fredoka', 'Baloo 2', 'Quicksand', system-ui, sans-serif;
-  --font-body: 'Nunito', 'Poppins', system-ui, sans-serif;
+  --font-heading: var(--font-fredoka), 'Fredoka', 'Baloo 2', 'Quicksand', system-ui, sans-serif;
+  --font-body: var(--font-nunito), 'Nunito', 'Poppins', system-ui, sans-serif;
 
   /* Radii & Shadows */
   --radius-sm: 14px;
