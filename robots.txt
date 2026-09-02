@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chelsealaberinto.github.io/sitemap.xml
