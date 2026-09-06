@@ -2,92 +2,56 @@
 
 Official portfolio of **Sea (Chelsea Laberinto)** — Boutique Creative Designer specializing in video invitations, bespoke event stationery, menu & brand identity, social media kits, presentations, and web design.
 
-Built with **Next.js (App Router)**, **TypeScript**, and modern **Vanilla CSS**. Ready for seamless deployment on **Vercel**.
+Built with pure **Vanilla HTML5**, **CSS3**, and **JavaScript** (zero frameworks, zero build tools, zero dependencies). Runs anywhere instantly by opening `index.html`.
 
 ---
 
 ## 🚀 Tech Stack
 
-- **Framework**: [Next.js](https://nextjs.org/) (App Router)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **UI & Styling**: Custom Modular CSS with CSS Custom Properties & Responsive Grid
-- **Typography**: Google Fonts (`Fredoka` & `Nunito`) optimized with `next/font/google`
-- **Deployment**: [Vercel](https://vercel.com/) (Zero Config)
+- **Markup**: Semantic HTML5 with JSON-LD Schema & OpenGraph metadata
+- **Styling**: Vanilla CSS with CSS Custom Properties, Flexbox & CSS Grid
+- **Interactivity**: Vanilla JavaScript (ES6+) with IntersectionObserver, Touch Events, Carousel & Lightbox Modal
+- **Typography**: Google Fonts (`Fredoka` & `Nunito`)
+- **Hosting**: GitHub Pages / Any Static Web Server
 
 ---
 
-## 🛠️ Local Development Setup
+## 🛠️ Getting Started
 
-### 1. Prerequisites
-Ensure [Node.js](https://nodejs.org/) (v18.17+ or v20+) and npm are installed.
-
-### 2. Install Dependencies
+### 1. View Locally
+Simply double-click `index.html` or open it directly in any modern web browser:
 ```bash
-npm install
-```
-
-### 3. Run Development Server
-```bash
-npm run dev
-```
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-### 4. Build for Production
-```bash
-npm run build
-```
-
-### 5. Run Production Server Locally
-```bash
-npm start
+# Or serve with any static server:
+# python -m http.server 8000
+# npx serve .
+# php -S localhost:8000
 ```
 
 ---
 
-## 🌐 Deploying to Vercel
+## 🌐 Deploying to GitHub Pages
 
-This Next.js application is pre-configured for zero-config deployment on Vercel:
-
-1. Push your repository to GitHub:
-   ```bash
-   git add .
-   git commit -m "Convert portfolio to Next.js App Router"
-   git push origin main
-   ```
-2. Go to [vercel.com](https://vercel.com) and click **"Add New Project"**.
-3. Import your GitHub repository `chelsealaberinto.github.io`.
-4. Vercel will automatically detect Next.js with all default settings. Click **"Deploy"**.
+1. Push this repository to GitHub.
+2. Go to **Settings** > **Pages**.
+3. Under **Build and deployment** > **Source**, select **Deploy from a branch**.
+4. Choose the `main` branch and `/ (root)` folder, then click **Save**.
+5. Your portfolio will be live at `https://<username>.github.io/`.
 
 ---
 
 ## 📂 Project Structure
 
 ```
-├── app/
-│   ├── globals.css        # Core design system tokens, typography, and styles
-│   ├── layout.tsx         # Root layout with fonts, metadata, and JSON-LD schema
-│   ├── page.tsx           # Single-page application orchestrating all sections
-│   ├── robots.ts          # Next.js dynamic robots.txt route
-│   └── sitemap.ts         # Next.js dynamic sitemap.xml route
-├── components/
-│   ├── Navbar.tsx         # Sticky navigation with mobile drawer & scrollspy
-│   ├── Hero.tsx           # Introduction, CTA, socials, stickers & parallax
-│   ├── Carousel.tsx       # Reusable interactive featured highlights carousel
-│   ├── AboutMe.tsx        # Story, pillars, tools cloud, education & credentials
-│   ├── Services.tsx       # 7 bespoke service cards with 5-color theme accents
-│   ├── Projects.tsx       # Filterable portfolio showcase with dynamic tabs
-│   ├── ProjectModal.tsx   # Project details lightbox modal (images & live iframe)
-│   ├── Contact.tsx        # Hot Pink solid block contact section with direct links
-│   ├── Footer.tsx         # Brand footer with smooth back-to-top button
-│   └── ScrollObserver.tsx # IntersectionObserver for scroll animations & scrollspy
-├── data/
-│   └── projects.ts        # Type-safe project showcases repository
-├── types/
-│   └── project.ts         # TypeScript interfaces for projects and filters
-├── public/
-│   └── assets/            # Static images, logos, mockups, and social icons
-├── .env.example           # Template for environment variables
-└── README.md              # Project documentation and setup guide
+├── index.html         # Main single-page application structure & metadata
+├── css/
+│   └── style.css      # Design tokens, typography, layout, and animations
+├── js/
+│   └── main.js        # Projects store, carousel, filter tabs, lightbox modal, scrollspy
+├── assets/            # Static images, logos, mockups, and social icons
+├── favicon.ico        # Root website favicon
+├── robots.txt         # Static search engine crawler instructions
+├── sitemap.xml        # Static XML sitemap for SEO
+└── README.md          # Project documentation
 ```
 
 ---
